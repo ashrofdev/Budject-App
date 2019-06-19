@@ -12,13 +12,7 @@ const DOMEls = {
   exp: document.querySelector('.exp'),
   income: document.querySelector(".income"),
   percentage: document.querySelector(".percentage"),
-  passInp: document.querySelector('.form')
 }
-DOMEls.passInp.addEventListener('submit', (e) => {
-  e.preventDefault()
-  localStorage.setItem('password', e.target.elements.password.value)
-})
-let pass = localStorage.getItem('password')
 
 
 const create = () => {
@@ -67,15 +61,11 @@ const create = () => {
         incEl.appendChild(remove);
   
         remove.addEventListener("click", () => {
-          let yes = prompt('Enter password')
-          if (yes === password) {
             incEl.remove();
             budget -= parseInt(amount.textContent);
             DOMEls.budget.textContent = '$' + budget;
             info2.textContent = '$' + budget
-          }else {
-            alert('wrong')
-          }
+          
           console.log(budget);
         });
       } else if (details.type === "exp") {
@@ -130,15 +120,8 @@ const create = () => {
     DOMEls.discription.value = "";
     DOMEls.amount.value = "";
   }
-  const authentication = () => {
-    let check = prompt('Enter password')
-    if (check === pass) {
-      go()
-    } else {
-      alert('wrong')
-    }
-  }
-  authentication()
+  go()
+    
 }
 
 DOMEls.addNew.addEventListener("click", create);
