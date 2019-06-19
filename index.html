@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Budget App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="heading">Available Budget in May 2019:</div>
+        <div class="budget">$0.00</div>
+        <div class="top inc">
+          <div class="text">INCOME</div>
+          <div class="value">$0</div>
+        </div>
+        <div class="top exp">
+          <div class="text">EXPENSES</div>
+          <div class="right"></div>
+          <div class="value">$-0</div>
+          <div class="percentage">0%</div>
+        </div>
+        <form class="form">
+          <input type="text" name="password" class="pass">
+          <button class="password">Change password</button>
+        </form>
+      </header>
+      <div class="field">
+          <select>
+            <option value="inc">+</option>
+            <option value="exp">-</option>
+          </select>
+          <input class="input1" type="text" placeholder="Add description" />
+          <input class="input2" type="text" placeholder="value" />
+          <button class="add">&checkmark;</button>
+      </div>
+      <div class="inc-exp">
+        <div class="income">
+          <div class="head">INCOME</div>
+        </div>
+        <div class="expenses">
+          <div class="head">EXPENSES</div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
